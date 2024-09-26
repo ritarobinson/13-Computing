@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu/Tutorial.gd" type="Script" id=1]
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0.184314, 0.184314, 0.184314, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_right = 312.0
+margin_bottom = 195.0
+text = "Try and escape while collecting the items in the maze to win.
+
+Use WASD or Arrow keys to move your player
+
+Press Enter while in radius of items to collect them.
+
+Press Esc to pause the game - or use your mouse to press the button.
+
+Use the Space bar to hit the enemies."
+fit_content_height = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 264.0
+margin_top = 152.0
+margin_right = 308.0
+margin_bottom = 172.0
+text = "Okay"
+
+[connection signal="focus_entered" from="Button" to="." method="_on_Button_focus_entered"]

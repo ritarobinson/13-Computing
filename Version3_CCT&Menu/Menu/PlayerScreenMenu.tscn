@@ -1,0 +1,60 @@
+[gd_scene format=2]
+
+[node name="PlayerScreenMenu" type="CanvasLayer"]
+
+[node name="Pause" type="Label" parent="."]
+margin_left = 273.0
+margin_top = 7.0
+margin_right = 313.0
+margin_bottom = 21.0
+text = "Pause"
+
+[node name="PauseButton" type="Button" parent="Pause"]
+margin_left = -6.0
+margin_top = -3.0
+margin_right = 44.0
+margin_bottom = 17.0
+toggle_mode = true
+text = "Pause"
+
+[node name="Health" type="Label" parent="."]
+margin_left = 140.0
+margin_top = 3.0
+margin_right = 180.0
+margin_bottom = 17.0
+text = "IIIII"
+align = 1
+
+[node name="ItemsInventory" type="Label" parent="."]
+margin_left = 172.0
+margin_top = 160.0
+margin_right = 230.0
+margin_bottom = 174.0
+text = "Items: "
+align = 1
+
+[node name="Collected" type="Label" parent="ItemsInventory"]
+margin_left = 51.0
+margin_right = 91.0
+margin_bottom = 14.0
+text = "0"
+
+[node name="Aim" type="Label" parent="ItemsInventory"]
+margin_left = 64.0
+margin_right = 104.0
+margin_bottom = 14.0
+text = "/ __"
+
+[node name="AttackDamage\?" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 85.0
+margin_bottom = 20.0
+text = "Damage : I"
+
+[node name="EnemyCount" type="Label" parent="."]
+margin_left = 48.0
+margin_top = 160.0
+margin_right = 140.0
+margin_bottom = 174.0
+text = "Enemy Count: "
