@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Enemy/bad_icon.png" type="Texture" id=1]
+[ext_resource path="res://Enemy/EnemyResource.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+texture = ExtResource( 1 )
+max_health = 4
+health = 4
+speed = 50

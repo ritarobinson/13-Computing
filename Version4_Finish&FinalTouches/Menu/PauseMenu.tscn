@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Menu/PauseMenu.gd" type="Script" id=1]
+[ext_resource path="res://Menu/Tutorial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Menu/Check.tscn" type="PackedScene" id=3]
+
+[node name="PauseMenu" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+tutorial_scene = ExtResource( 2 )
+
+[node name="Container" type="VBoxContainer" parent="."]
+margin_left = 96.0
+margin_top = 29.0
+margin_right = 226.0
+margin_bottom = 155.0
+
+[node name="GamePaused" type="Label" parent="Container"]
+margin_right = 130.0
+margin_bottom = 14.0
+text = "Game Paused"
+align = 1
+
+[node name="Spacer" type="Control" parent="Container"]
+margin_top = 18.0
+margin_right = 130.0
+margin_bottom = 18.0
+
+[node name="Resume" type="Button" parent="Container"]
+margin_top = 22.0
+margin_right = 130.0
+margin_bottom = 42.0
+text = "Resume"
+
+[node name="Spacer2" type="Control" parent="Container"]
+margin_top = 46.0
+margin_right = 130.0
+margin_bottom = 46.0
+
+[node name="Restart" type="Button" parent="Container"]
+margin_top = 50.0
+margin_right = 130.0
+margin_bottom = 70.0
+text = "Restart"
+
+[node name="Spacer3" type="Control" parent="Container"]
+margin_top = 74.0
+margin_right = 130.0
+margin_bottom = 74.0
+
+[node name="Quit" type="Button" parent="Container"]
+margin_top = 78.0
+margin_right = 130.0
+margin_bottom = 98.0
+text = "Quit"
+
+[node name="Spacer4" type="Control" parent="Container"]
+margin_top = 102.0
+margin_right = 130.0
+margin_bottom = 102.0
+
+[node name="HowToPlay" type="Button" parent="Container"]
+margin_top = 106.0
+margin_right = 130.0
+margin_bottom = 126.0
+text = "How to play"
+
+[node name="Tutorial" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="Check" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[connection signal="focus_entered" from="Container/Resume" to="." method="_on_Resume_focus_entered"]
+[connection signal="focus_entered" from="Container/Restart" to="." method="_on_Restart_focus_entered"]
+[connection signal="focus_entered" from="Container/Quit" to="." method="_on_Quit_focus_entered"]
+[connection signal="focus_entered" from="Container/HowToPlay" to="." method="_on_HowToPlay_focus_entered"]
+[connection signal="focus_entered" from="Check/ContinueButton" to="." method="_on_ContinueButton_focus_entered"]
+
+[editable path="Check"]
